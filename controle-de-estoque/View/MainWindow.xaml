@@ -1,0 +1,133 @@
+﻿<Window x:Class="controle_de_estoque.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:controle_de_estoque"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000" Background="White" Closing="Fechar">
+    <Grid>
+        <Grid Background="DarkSlateGray" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="200">
+            <StackPanel>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_CadastrarProduto">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/mais.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Cadastrar produto</TextBlock>
+                    </DockPanel>
+                </Button>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_EditarProduto">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/lapis.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Editar produto</TextBlock>
+                    </DockPanel>
+                </Button>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_RemoverProduto">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/lixeira.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Remover produto</TextBlock>
+                    </DockPanel>
+                </Button>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_Venda">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/carrinho.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Simular venda</TextBlock>
+                    </DockPanel>
+                </Button>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_CadastrarCategoria">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/mais.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Cadastrar categoria</TextBlock>
+                    </DockPanel>
+                </Button>
+                <Button BorderThickness="0" Background="DarkSlateGray" Height="50" Width="200" Click="Button_RemoverCategoria">
+                    <DockPanel Width="200">
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="/Imagens/lixeira.jpg"></BitmapImage>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" VerticalAlignment="Center">Remover categoria</TextBlock>
+                    </DockPanel>
+                </Button>
+                <!-- <Button BorderThickness="0" Background="DarkSlateGray" Foreground="White" Content="Relatório de estoque" FontWeight="Bold" FontSize="16" Height="50" Width="200"/>
+                <Button BorderThickness="0" Background="DarkSlateGray" Foreground="White" Content="Relatório de vendas" FontWeight="Bold" FontSize="16" Height="50" Width="200"/> -->
+            </StackPanel>
+        </Grid>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="200,0,0,0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="227*"/>
+                <ColumnDefinition Width="73*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Height="20" VerticalAlignment="Top" Margin="5,5,5,0" FontSize="16" Grid.ColumnSpan="2" >Buscar por código:</TextBlock>
+            <TextBlock Height="20" VerticalAlignment="Top" Margin="5,30,0,0" FontSize="16" Grid.ColumnSpan="2" >Filtrar por categoria:</TextBlock>
+            <Button Height="20" Width="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="355,8,0,0" Background="White" BorderBrush="White" Click="Button_Busca">
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="/Imagens/lupa.jpg"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Button>
+            <Button Height="20" Width="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="355,33,0,0" Background="White" BorderBrush="White" Click="Button_Filtro">
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="/Imagens/lupa.jpg"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Button>
+            <TextBox Name="busca" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="150,8,0,0" FontSize="14"></TextBox>
+            <ComboBox Name="filtro" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="151,33,0,0" FontSize="12" IsEditable="True">
+            </ComboBox>
+            <DataGrid x:Name="EstoqueDataGrid" AlternationCount="2" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="*" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,60,0,0" IsSynchronizedWithCurrentItem="True" FontSize="15" Grid.ColumnSpan="2">>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Produto" Binding="{Binding Nome}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Código" Binding="{Binding Codigo}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Categoria" Binding="{Binding Categoria.NomeCategoria}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Preço" Binding="{Binding Preco}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Button Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White" Click="Button_Atualizar">
+            <Image>
+                <Image.Source>
+                    <BitmapImage UriSource="/Imagens/atualizar.jpg"></BitmapImage>
+                </Image.Source>
+            </Image>
+        </Button>
+        <Button Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="60, 10" Background="White" BorderBrush="White" Click="Button_Notificacoes">
+            <Image>
+                <Image.Source>
+                    <BitmapImage UriSource="/Imagens/sino.jpg"></BitmapImage>
+                </Image.Source>
+            </Image>
+        </Button>
+        <Button Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="110, 10" Background="White" BorderBrush="White" Click="Button_Configuracoes">
+            <Image>
+                <Image.Source>
+                    <BitmapImage UriSource="/Imagens/ferramenta.jpg"></BitmapImage>
+                </Image.Source>
+            </Image>
+        </Button>
+    </Grid>
+
+</Window>

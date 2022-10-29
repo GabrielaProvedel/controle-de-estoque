@@ -1,0 +1,19 @@
+﻿<Window x:Class="controle_de_estoque.View.AlterarConfiguracoes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:controle_de_estoque.View"
+        mc:Ignorable="d"
+        Title="AlterarConfiguracoes" Height="400" Width="600">
+    <Grid>
+        <StackPanel>
+            <Label Height="36" FontSize="20" Background="LightGray">Configurações</Label>
+            <DockPanel Height="30">
+                <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="5">Definir quantidade baixa em: </TextBlock>
+                <TextBox Name="quantidade" Height="20" Width="60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,2" FontSize="16"></TextBox>
+            </DockPanel>
+        </StackPanel>
+        <Button Height="30" Width="120" VerticalAlignment="Bottom" Margin="10" FontSize="18" Click="Button_Salvar">Salvar</Button>
+    </Grid>
+</Window>

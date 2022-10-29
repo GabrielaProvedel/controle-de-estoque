@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AlterarConfiguracoes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CadastrarCategoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CadastrarProduto.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditarProduto.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Notificacoes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RemoverCategoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RemoverProduto.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SimularVenda.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\AlterarConfiguracoes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CadastrarCategoria.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CadastrarProduto.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditarProduto.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Notificacoes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RemoverCategoria.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RemoverProduto.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SimularVenda.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

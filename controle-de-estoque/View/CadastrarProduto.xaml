@@ -1,0 +1,38 @@
+﻿<Window x:Class="controle_de_estoque.View.CadastrarProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:controle_de_estoque.View"
+        mc:Ignorable="d"
+        Title="CadastrarProduto" Height="300" Width="400">
+    <Grid Background="White">
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20">Cadastrar produto</Label>
+        <Grid Background="LightGray" VerticalAlignment="Top" Height="220" Width="300" Margin="0,40,0,0">
+            <StackPanel>
+                <DockPanel Height="35" Margin="5,0">
+                    <TextBlock VerticalAlignment="Center" FontSize="15">Código:</TextBlock>
+                    <TextBox Name="codigo" Margin="5,0" VerticalAlignment="Center" FontSize="15" BorderBrush="LightGray"></TextBox>
+                </DockPanel>
+                <DockPanel Height="35" Margin="5,0">
+                    <TextBlock VerticalAlignment="Center" FontSize="15">Nome:</TextBlock>
+                    <TextBox Name="nome" Margin="5,0" VerticalAlignment="Center" FontSize="15" BorderBrush="LightGray"></TextBox>
+                </DockPanel>
+                <DockPanel Height="35" Margin="5,0">
+                    <TextBlock VerticalAlignment="Center" FontSize="15">Categoria:</TextBlock>
+                    <ComboBox Name="categoria" BorderThickness="0" Height="20"  Margin="5,0" FontSize="14" IsEditable="True">
+                    </ComboBox>
+                </DockPanel>
+                <DockPanel Height="35" Margin="5,0">
+                    <TextBlock VerticalAlignment="Center" FontSize="15">Preço:</TextBlock>
+                    <TextBox Name="preco" Margin="5,0" VerticalAlignment="Center" FontSize="15" BorderBrush="LightGray"></TextBox>
+                </DockPanel>
+                <DockPanel Height="35" Margin="5,0">
+                    <TextBlock VerticalAlignment="Center" FontSize="15">Quantidade:</TextBlock>
+                    <TextBox Name="quantidade" Margin="5,0" VerticalAlignment="Center" FontSize="15" BorderBrush="LightGray"></TextBox>
+                </DockPanel>
+                <Button Background="Gray" Height="30" Width="150" FontSize="16" VerticalAlignment="Center" Click="Button_Cadastrar">Cadastrar</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

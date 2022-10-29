@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>controle_de_estoque</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Imagens\atualizar.jpg" />
+    <None Remove="Imagens\carrinho.jpg" />
+    <None Remove="Imagens\controle.jpg" />
+    <None Remove="Imagens\ferramenta.jpg" />
+    <None Remove="Imagens\lapis.jpg" />
+    <None Remove="Imagens\lixeira.jpg" />
+    <None Remove="Imagens\lupa.jpg" />
+    <None Remove="Imagens\mais.jpg" />
+    <None Remove="Imagens\sino.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagens\carrinho.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imagens\atualizar.jpg" />
+    <Resource Include="Imagens\ferramenta.jpg" />
+    <Resource Include="Imagens\lapis.jpg" />
+    <Resource Include="Imagens\lixeira.jpg" />
+    <Resource Include="Imagens\lupa.jpg" />
+    <Resource Include="Imagens\mais.jpg" />
+    <Resource Include="Imagens\sino.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="Imagens\controle.jpg" />
+  </ItemGroup>
+
+</Project>
